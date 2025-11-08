@@ -40,11 +40,14 @@ def play(
     playback = Playback()
     playback.load_file(audio_path)
 
-    while loop:
+    while True:
         playback.play()
 
         while playback.active:
             time.sleep(1)
+
+        if not loop:
+            break
 
 
 if __name__ == "__main__":

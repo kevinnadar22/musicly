@@ -1,7 +1,7 @@
 [project]
-name = "terminal-music-player"
-version = "0.1.0"
-description = "Add your description here"
+name = "musicly"
+version = "0.1.1"
+description = "A terminal-based music player that allows users to search and play songs directly from the command line."
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
@@ -9,9 +9,17 @@ dependencies = [
     "typer>=0.20.0",
     "yt-dlp>=2025.10.22",
 ]
+authors = [
+    {name = "Maria Kevin", email = "jesikamaraj@gmail.com"}
+]
+license = {text = "MIT"}
 
 [project.scripts]
-play = "player.main:app"
+musicly = "player.main:app"
 
 [tool.setuptools]
-packages = ["player", "downloads"]
+packages = ["player"]
+
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
