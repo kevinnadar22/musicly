@@ -1,6 +1,6 @@
 [project]
 name = "musicly"
-version = "0.1.1"
+version = "0.1.2"
 description = "A terminal-based music player that allows users to search and play songs directly from the command line."
 readme = "README.md"
 requires-python = ">=3.13"
@@ -13,6 +13,11 @@ authors = [
     {name = "Maria Kevin", email = "jesikamaraj@gmail.com"}
 ]
 license = {text = "MIT"}
+
+[project.urls]
+Homepage = "https://github.com/kevinnadar22/musicly"
+Repository = "https://github.com/kevinnadar22/musicly"
+Issues = "https://github.com/kevinnadar22/musicly/issues"
 
 [project.scripts]
 musicly = "player.main:app"
