@@ -23,10 +23,10 @@ keywords = [
 ]
 
 [project.urls]
-Changelog = "https://github.com/kevinnadar22/musicly/releases"
-Homepage = "https://github.com/kevinnadar22/musicly"
-Repository = "https://github.com/kevinnadar22/musicly"
-Issues = "https://github.com/kevinnadar22/musicly/issues"
+"Changelog" = "https://github.com/kevinnadar22/musicly/releases"
+"Homepage" = "https://github.com/kevinnadar22/musicly"
+"Repository" = "https://github.com/kevinnadar22/musicly"
+"Issues" = "https://github.com/kevinnadar22/musicly/issues"
 
 [project.scripts]
 musicly = "player.main:app"
