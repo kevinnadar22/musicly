@@ -35,8 +35,6 @@ def play(
         print("Failed to download the audio.")
         return
 
-    print(f"Playing audio from: {audio_path}")
-
     playback = Playback()
     playback.load_file(audio_path)
 
