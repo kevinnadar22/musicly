@@ -15,10 +15,10 @@ import urllib.request
 import urllib.parse
 
 
-def get_path_from_url(url: str) -> str | None:
+def get_path_from_url(url: str) -> str:
     """Get file path from URL."""
     parsed_url = urllib.parse.urlparse(url)
-    return parsed_url.path if parsed_url.path else None
+    return parsed_url.path if parsed_url.path else ""
 
 
 def get_extension_from_url(url: str) -> str | None:
@@ -33,11 +33,12 @@ def get_extension_from_url(url: str) -> str | None:
 def download_with_chunk(url, dest_path, chunk_size=8192):
     """Download file from URL with chunked reading."""
     try:
-        with urllib.request.urlopen(url) as response, open(dest_path, "wb") as out_file:
-            while True:
-                chunk = response.read(chunk_size)
-                if not chunk:
-                    break
-                out_file.write(chunk)
+        with urllib.request.urlopen(url) as response:
+            with open(dest_path, "wb") as out_file:
+                while True:
+                    chunk = response.read(chunk_size)
+                    if not chunk:
+                        break
+                    out_file.write(chunk)
     except Exception as e:
         print(f"Failed to download: {e}")

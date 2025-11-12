@@ -16,6 +16,7 @@ from .url_helpers import get_extension_from_url, download_with_chunk
 from .file_operations import unzip_file, clean_tools
 import shutil
 
+
 def get_ffmpeg():
     """Download ffmpeg binary if not present."""
     platform_key = os.name  # 'nt' for Windows, 'posix' for Linux/Mac

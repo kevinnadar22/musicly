@@ -23,7 +23,8 @@ def download_audio(name: str):
     # Create download directory if it doesn't exist
     os.makedirs(config.download_dir, exist_ok=True)
 
-    # yt-dlp ytsearch1:"Artist - Track Name" -x --audio-format mp3 -o "%(title)s.%(ext)s"
+    # yt-dlp ytsearch1:"Artist - Track Name" -x --audio-format mp3
+    # -o "%(title)s.%(ext)s"
     path = f"{name}.mp3"
     full_path = os.path.join(config.download_dir, path)
     cmd = [

@@ -30,8 +30,14 @@ class Config(object):
         }
 
         self.ffmpeg_cloud_urls = {
-            "nt": "https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-n7.1-latest-win64-lgpl-shared-7.1.zip",
-            "posix": "https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz",
+            "nt": (
+                "https://github.com/BtbN/FFmpeg-Builds/releases/download/"
+                "latest/ffmpeg-n7.1-latest-win64-lgpl-shared-7.1.zip"
+            ),
+            "posix": (
+                "https://johnvansickle.com/ffmpeg/releases/"
+                "ffmpeg-release-amd64-static.tar.xz"
+            ),
         }
 
 

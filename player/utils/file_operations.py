@@ -16,13 +16,13 @@ import zipfile
 from ..config import config
 
 
-
 def partial_search_file(filename: str, search_path: str) -> str | None:
     """Partial filename search in a given path.
 
-    Sometimes yt-dlp may alter the filename slightly, so we search for a partial match.
+    Sometimes yt-dlp may alter the filename slightly, so we search for a
+    partial match.
     """
-    for root, dirs, files in os.walk(search_path):
+    for root, _dirs, files in os.walk(search_path):
         for file in files:
             if filename in file:
                 return os.path.join(root, file)

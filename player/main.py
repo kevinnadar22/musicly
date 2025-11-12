@@ -4,7 +4,8 @@
 File: main.py
 Author: Maria Kevin
 Created: 2025-11-09
-Description: A terminal-based music player that allows users to search and play songs directly from the command line.
+Description: A terminal-based music player that allows users to search and
+play songs directly from the command line.
 """
 
 __author__ = "Maria Kevin"
@@ -18,12 +19,14 @@ from .utils import download_audio
 
 app = Typer()
 
+# Default argument for name parameter
+_DEFAULT_NAME_HELP = "The name of the song to play, example: 'All the stars'"
+_ARGUMENT_NAME = Argument(..., help=_DEFAULT_NAME_HELP)
+
 
 @app.command()
 def play(
-    name: str = Argument(
-        ..., help="The name of the song to play, example: 'All the stars'"
-    ),
+    name: str = _ARGUMENT_NAME,
     loop: bool = False,
 ):
     """Play a song by name."""
