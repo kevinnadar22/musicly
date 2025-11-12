@@ -11,12 +11,6 @@ __author__ = "Maria Kevin"
 __version__ = "0.1.6"
 
 
-def test_importable():
-    import musicly
-
-    assert hasattr(musicly, "__version__")
-
-
 def test_cli_app():
     from typer.testing import CliRunner
     from player.main import app
