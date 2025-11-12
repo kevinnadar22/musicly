@@ -17,4 +17,4 @@ musicly play "song name" --loop
 
 ## Requirements
 
-- Python >= 3.10
+- Python >= 3.10 
