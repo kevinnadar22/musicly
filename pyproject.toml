@@ -14,8 +14,16 @@ authors = [
     {name = "Maria Kevin", email = "jesikamaraj@gmail.com"}
 ]
 license = {text = "MIT"}
+keywords = [
+  "music",
+  "terminal",
+  "player",
+  "command-line",
+  "yt-dlp",
+]
 
 [project.urls]
+Changelog = "https://github.com/kevinnadar22/musicly/releases"
 Homepage = "https://github.com/kevinnadar22/musicly"
 Repository = "https://github.com/kevinnadar22/musicly"
 Issues = "https://github.com/kevinnadar22/musicly/issues"
