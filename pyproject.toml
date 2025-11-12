@@ -1,6 +1,6 @@
 [project]
 name = "musicly"
-version = "0.1.2"
+version = "0.1.5"
 description = "A terminal-based music player that allows users to search and play songs directly from the command line."
 readme = "README.md"
 requires-python = ">=3.13"
@@ -23,8 +23,9 @@ Issues = "https://github.com/kevinnadar22/musicly/issues"
 [project.scripts]
 musicly = "player.main:app"
 
-[tool.setuptools]
-packages = ["player"]
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["player*"]
 
 [build-system]
 requires = ["setuptools>=61", "wheel"]
