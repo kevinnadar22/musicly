@@ -2,6 +2,8 @@
 
 A terminal-based music player for searching and playing songs from the command line.
 
+<img src="assets/image.png" alt="Musicly Screenshot" width="600"/>
+
 ## Installation
 
 ```bash
