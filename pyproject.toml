@@ -1,6 +1,6 @@
 [project]
 name = "musicly"
-version = "0.1.6"
+version = "0.1.7"
 description = "A terminal-based music player that allows users to search and play songs directly from the command line."
 readme = "README.md"
 requires-python = ">=3.10"
