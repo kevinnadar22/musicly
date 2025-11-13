@@ -53,3 +53,17 @@ def download_audio(name: str):
         return None
 
     return partial_search_file(path, config.download_dir)
+
+
+def get_existing_audio(name: str) -> str | None:
+    """Check if audio file already exists for the given name."""
+    path = f"{name}.mp3"
+    return partial_search_file(path, config.download_dir)
+
+
+def get_or_download_audio(name: str) -> str | None:
+    """Get existing audio file or download if not found."""
+    existing_file = get_existing_audio(name)
+    if existing_file:
+        return existing_file
+    return download_audio(name)

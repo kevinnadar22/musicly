@@ -12,43 +12,23 @@ __author__ = "Maria Kevin"
 __version__ = "0.1.0"
 
 from typer import Typer, Argument
-from just_playback import Playback
-import time
+from typing import Optional
 
-from .utils import download_audio
+from .gui.player import run_player
 
 app = Typer()
 
 # Default argument for name parameter
 _DEFAULT_NAME_HELP = "The name of the song to play, example: 'All the stars'"
-_ARGUMENT_NAME = Argument(..., help=_DEFAULT_NAME_HELP)
+_ARGUMENT_NAME = Argument(None, help=_DEFAULT_NAME_HELP)
 
 
 @app.command()
 def play(
-    name: str = _ARGUMENT_NAME,
-    loop: bool = False,
+    name: Optional[str] = _ARGUMENT_NAME,
 ):
-    """Play a song by name."""
-
-    print(f"Downloading and playing: {name}")
-    audio_path = download_audio(name)
-
-    if not audio_path:
-        print("Failed to download the audio.")
-        return
-
-    playback = Playback()
-    playback.load_file(audio_path)
-
-    while True:
-        playback.play()
-
-        while playback.active:
-            time.sleep(1)
-
-        if not loop:
-            break
+    """Play a song by name using the GUI player."""
+    run_player(song_name=name)
 
 
 if __name__ == "__main__":

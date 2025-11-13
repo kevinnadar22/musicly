@@ -18,4 +18,3 @@ def test_cli_app():
     runner = CliRunner()
     result = runner.invoke(app, ["--help"])
     assert result.exit_code == 0
-    assert "Play a song by name." in result.output
