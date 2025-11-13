@@ -2,7 +2,7 @@
 
 A terminal-based music player for searching and playing songs from the command line.
 
-<img src="assets/ss.gif" alt="Musicly Screenshot" width="600"/>
+<img src="assets/ss.gif" alt="Musicly Screenshot"/>
 
 ## Quick Usage 
 
