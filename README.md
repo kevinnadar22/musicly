@@ -2,20 +2,27 @@
 
 A terminal-based music player for searching and playing songs from the command line.
 
-<img src="assets/image.png" alt="Musicly Screenshot" width="600"/>
+<img src="assets/ss.gif" alt="Musicly Screenshot" width="600"/>
+
+## Quick Usage 
+
+```bash
+uvx musicly 
+```
 
 ## Installation
 
 ```bash
-uvx musicly "All the stars"
+pip install uv
+uv pip install musicly
 ```
 
-## Usage
+## Running
 
 ```bash
-musicly play "song name"
-musicly play "song name" --loop
+musicly 
 ```
+
 
 ## Requirements
 
