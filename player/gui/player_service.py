@@ -12,6 +12,7 @@ __author__ = "Maria Kevin"
 __version__ = "0.1.0"
 
 import threading
+import traceback
 from typing import Callable, Optional
 from just_playback import Playback
 
@@ -78,7 +79,8 @@ class PlayerService:
 
             except Exception as e:
                 if on_error:
-                    on_error(f"Error: {str(e)}")
+                    error_details = traceback.format_exc()
+                    on_error(f"Error: {str(e)}\n\n{error_details}")
 
         self._download_thread = threading.Thread(target=_download, daemon=True)
         self._download_thread.start()
