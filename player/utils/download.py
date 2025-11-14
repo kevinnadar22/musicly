@@ -49,8 +49,7 @@ def download_audio(name: str):
     result = subprocess.run(cmd, capture_output=True, text=True)
 
     if result.returncode != 0:
-        print(f"Error downloading audio: {result.stderr}")
-        return None
+        raise Exception(f"Error downloading audio: {result.stderr}")
 
     return partial_search_file(path, config.download_dir)
 
