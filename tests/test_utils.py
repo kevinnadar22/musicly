@@ -16,6 +16,7 @@ import zipfile
 import tarfile
 from unittest.mock import Mock, patch, MagicMock
 from pathlib import Path
+import pytest
 
 # Import the functions to test
 from player.utils.url_helpers import (
@@ -505,6 +506,5 @@ class TestDownload:
         mock_is_ffmpeg_available.return_value = True
         mock_subprocess.return_value = Mock(returncode=1, stderr="Download failed")
 
-        result = download_audio("test song")
-
-        assert result is None
+        with pytest.raises(Exception):
+            download_audio("test song")

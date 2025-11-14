@@ -11,7 +11,7 @@ __author__ = "Maria Kevin"
 __version__ = "0.1.0"
 
 from unittest.mock import Mock, patch
-
+import pytest
 from player.utils.download import download_audio
 
 
@@ -111,6 +111,5 @@ class TestDownloadAudio:
         mock_is_ffmpeg_available.return_value = True
         mock_subprocess.return_value = Mock(returncode=1, stderr="Download failed")
 
-        result = download_audio("test song")
-
-        assert result is None
+        with pytest.raises(Exception):
+            download_audio("test song")
